@@ -52,7 +52,7 @@ security:
         roles: IS_AUTHENTICATED_FULLY,
         methods: [GET, PUT, DELETE],
       }
-    - { path: ^/api/invoices, roles: IS_AUTHENTICATED_FULLY }
+    - { path: ^/api/invoices, roles: IS_AUTHENTICATED_ANONYMOUSLY }
     - { path: ^/api/customers, roles: IS_AUTHENTICATED_ANONYMOUSLY }
     - { path: ^/api, roles: IS_AUTHENTICATED_ANONYMOUSLY }
     # - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
