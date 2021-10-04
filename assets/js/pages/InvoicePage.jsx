@@ -87,7 +87,7 @@ const InvoicePage = ({ history, match }) => {
       } else {
         await invoicesAPI.create(invoice)
         // TODO: Flash notification success
-        toast.error('La facture a bien été enregistrée')
+        toast.success('La facture a bien été enregistrée')
         history.replace('/invoices')
       }
     } catch ({ response }) {
