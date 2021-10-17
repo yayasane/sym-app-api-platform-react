@@ -48,7 +48,6 @@ const RegisterPage = ({ history }) => {
       )
       history.replace('/login')
     } catch (error) {
-      console.log(error.response)
       const { violations } = error.response.data
       if (violations) {
         const apiErrors = {}

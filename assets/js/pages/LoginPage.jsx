@@ -27,13 +27,11 @@ const LoginPage = ({ history }) => {
       toast.success('Vous êtes désormais connecté !')
       history.replace('/customers')
     } catch (error) {
-      console.log(error.response)
       setError(
         'Aucun compte ne posséde cette adresse ou alors les informations ne correspondent pas',
       )
       toast.error('Une erreur est survenue')
     }
-    console.log(credentials)
   }
   return (
     <>

@@ -102,7 +102,6 @@ const InvoicePage = ({ history, match }) => {
       // TODO: Flash Notification d'erreurs
       toast.error('Des erreurs dans votre formulaire')
     }
-    console.log(invoice)
   }
 
   return (
