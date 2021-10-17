@@ -17,8 +17,11 @@ const Field = ({
   error = '',
 }) => (
   <div className="mb-3">
-    <label htmlFor={name}>{label}</label>
+    <label className="form-label" htmlFor={name}>
+      {label}
+    </label>
     <input
+      className="form-control"
       value={value}
       onChange={onChange}
       type={type}
