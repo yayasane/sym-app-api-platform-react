@@ -53,8 +53,9 @@ const LoginPage = ({ history }) => {
           onChange={handleChange}
           placeholder="Mot de passe"
           error={error}
+          type="password"
         />
-        <div className="form-group">
+        <div className="mb-3">
           <button type="submit" className="btn btn-success">
             Je me connecte
           </button>

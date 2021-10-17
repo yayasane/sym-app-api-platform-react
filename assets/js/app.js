@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { HashRouter, Route, Switch, withRouter } from 'react-router-dom'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import 'bootstrap/dist/js/bootstrap.bundle'
 // start the Stimulus application
 import '../bootstrap'
 /*

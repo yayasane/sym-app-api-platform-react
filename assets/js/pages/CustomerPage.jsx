@@ -126,7 +126,7 @@ const CustomerPage = ({ match, history }) => {
             onChange={handleChange}
             error={errors.company}
           />
-          <div className="form-group">
+          <div className="mb-3">
             <button type="submit" className="btn btn-success">
               Enregistrer
             </button>

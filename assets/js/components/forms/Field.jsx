@@ -16,7 +16,7 @@ const Field = ({
   type = 'text',
   error = '',
 }) => (
-  <div className="form-group">
+  <div className="mb-3">
     <label htmlFor={name}>{label}</label>
     <input
       value={value}

@@ -68,7 +68,7 @@ const CustomersPage = (props) => {
   return (
     <>
       <div className="mb-3 d-flex justify-content-between align-items-center">
-        <h1>Liste des clients (pagination)</h1>
+        <h1>Liste des clients</h1>
         <Link to="/customers/new" className="btn btn-primary">
           Créer un client
         </Link>
@@ -82,54 +82,56 @@ const CustomersPage = (props) => {
           placeholder="Rechercher ..."
         />
       </div>
-      <table className="table table-hover">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Client</th>
-            <th>Email</th>
-            <th>Entreprise</th>
-            <th className="text-center">Factures</th>
-            <th className="text-center">Montant Total</th>
-            <th></th>
-          </tr>
-        </thead>
-        {!loading && (
-          <tbody>
-            {paginatedCustomers.map((customer, key) => (
-              <tr key={customer.id}>
-                <td>{customer.id}</td>
-                <td>
-                  <Link to={'/customers/' + customer.id}>
-                    {customer.firstName} {customer.lastName}
-                  </Link>
-                </td>
-                <td>{customer.email}</td>
-                <td>{customer.company}</td>
-                <td className="text-center">
-                  <span className="badge bg-primary">
-                    {customer.invoices.length}
-                  </span>
-                </td>
-                <td className="text-center">
-                  {customer.totalAmount.toLocaleString()} €
-                </td>
-                <td>
-                  <button
-                    onClick={() => {
-                      handleDelete(customer.id)
-                    }}
-                    disabled={customer.invoices.length > 0 ? true : false}
-                    className="btn btn-sm btn-danger"
-                  >
-                    Supprimer
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        )}
-      </table>
+      <div className="table-responsive">
+        <table className="table table-hover">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Client</th>
+              <th>Email</th>
+              <th>Entreprise</th>
+              <th className="text-center">Factures</th>
+              <th className="text-center">Montant Total</th>
+              <th></th>
+            </tr>
+          </thead>
+          {!loading && (
+            <tbody>
+              {paginatedCustomers.map((customer, key) => (
+                <tr key={customer.id}>
+                  <td>{customer.id}</td>
+                  <td>
+                    <Link to={'/customers/' + customer.id}>
+                      {customer.firstName} {customer.lastName}
+                    </Link>
+                  </td>
+                  <td>{customer.email}</td>
+                  <td>{customer.company}</td>
+                  <td className="text-center">
+                    <span className="badge bg-primary">
+                      {customer.invoices.length}
+                    </span>
+                  </td>
+                  <td className="text-center">
+                    {customer.totalAmount.toLocaleString()} €
+                  </td>
+                  <td>
+                    <button
+                      onClick={() => {
+                        handleDelete(customer.id)
+                      }}
+                      disabled={customer.invoices.length > 0 ? true : false}
+                      className="btn btn-sm btn-danger"
+                    >
+                      Supprimer
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          )}
+        </table>
+      </div>
       {loading && <TableLoader />}
       {filteredCustomers.length > itemsPerPage && (
         <Pagination

@@ -18,7 +18,7 @@ const Navbar = ({ history }) => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/">
-          SymReact
+          MY CRM
         </NavLink>
         <button
           className="navbar-toggler"

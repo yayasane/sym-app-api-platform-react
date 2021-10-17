@@ -111,7 +111,7 @@ const RegisterPage = ({ history }) => {
           onChange={handleChange}
         />
 
-        <div className="form-group">
+        <div className="mb-3">
           <button type="submit" className="btn btn-success">
             Confirmation
           </button>
