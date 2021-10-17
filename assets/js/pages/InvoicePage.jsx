@@ -147,7 +147,7 @@ const InvoicePage = ({ history, match }) => {
             <option value="PAID">Payée</option>
             <option value="CANCELED">Annulée</option>
           </Select>
-          <div className="form-group">
+          <div className="mb-3">
             <button className="btn btn-success">Enregistrer</button>
             <Link to="/invoices" className="btn btn-link">
               Retour aux factures
