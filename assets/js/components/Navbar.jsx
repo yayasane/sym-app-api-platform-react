@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import AuthContext from '../contexts/AuthContext'
 import authAPI from '../services/authAPI'
+import Logo from '../../logo.png'
 
 const Navbar = ({ history }) => {
   const { isAuthenticated, setIsAuthenticated } = useContext(AuthContext)
@@ -18,7 +19,16 @@ const Navbar = ({ history }) => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/">
-          MY CRM
+          <div className="d-flex">
+            <img
+              src={Logo}
+              alt="logo"
+              width="32"
+              height="32"
+              className="me-1"
+            />
+            MY CRM
+          </div>
         </NavLink>
         <button
           className="navbar-toggler"
